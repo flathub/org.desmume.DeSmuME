@@ -44,7 +44,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/TASVideos/desmume",
-                    "commit": "91f6e4a9ef7368237bc650ceaeead437e29cd93e"
+                    "commit": "6ef876b217c62c659281e229c97600a483ad81e2"
                 }
             ]
         }
