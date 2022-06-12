@@ -46,15 +46,15 @@
                 }
             },
             "config-opts": [
-                "-Dfrontend-cli=false",
+                "-Dfrontend-cli=true",
                 "--buildtype=release",
                 "--optimization=2"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/TASVideos/desmume",
-                    "commit": "b4080b2cae2f8e2700e318b97e369915e8995796"
+                    "url": "https://github.com/TASEmulators/desmume",
+                    "commit": "08b6fade0bc95749acc9820cb9688aaf39d00c87"
                 }
             ]
         }
