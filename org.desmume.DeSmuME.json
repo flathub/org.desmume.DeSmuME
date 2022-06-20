@@ -53,8 +53,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/TASEmulators/desmume.git",
-                    "commit": "08b6fade0bc95749acc9820cb9688aaf39d00c87"
+                    "url": "https://github.com/TASEmulators/desmume",
+                    "commit": "d4afd4977ce8b7ba6293946c74914afe79536059"
                 }
             ]
         }
