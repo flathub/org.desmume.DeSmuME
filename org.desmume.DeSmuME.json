@@ -46,7 +46,7 @@
                 }
             },
             "config-opts": [
-                "-Dfrontend-cli=false",
+                "-Dfrontend-cli=true",
                 "--buildtype=release",
                 "--optimization=2"
             ],
