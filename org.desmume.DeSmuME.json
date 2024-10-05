@@ -57,17 +57,13 @@
             "build-options" : {
                 "arch": {
                     "x86_64": {
-                        "cflags": "-minline-all-stringops -march=native -Ofast -flto"
+                        "cflags": "-minline-all-stringops"
                     }
                 }
             },
             "config-opts": [
                 "--buildtype=release",
-                "-Dfrontend-cli=false",
-                "-Dwifi=true",
-                "-Dopenal=true",
-                "-Dopengl=true",
-                "-Degl=true"
+                "-Dfrontend-cli=false"
             ],
             "sources": [
                 {
