@@ -46,7 +46,7 @@
                     "commit": "e83424d5928ab8513d2d082779c275765dee31b9",
                     "x-checker-data": {
                         "type": "git",
-                        "tag-pattern": "^([\d.]+)$"}
+                        "tag-pattern": "^([\\d.]+)$"}
                 }
             ]
         },
@@ -57,13 +57,17 @@
             "build-options" : {
                 "arch": {
                     "x86_64": {
-                        "cflags": "-minline-all-stringops"
+                        "cflags": "-minline-all-stringops -march=native -Ofast -flto"
                     }
                 }
             },
             "config-opts": [
                 "--buildtype=release",
-                "-Dfrontend-cli=false"
+                "-Dfrontend-cli=false",
+                "-Dwifi=true",
+                "-Dopenal=true",
+                "-Dopengl=true",
+                "-Degl=true"
             ],
             "sources": [
                 {
