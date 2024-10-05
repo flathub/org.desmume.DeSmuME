@@ -9,7 +9,8 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=ipc",
-        "--device=all"
+        "--device=all",
+        "--filesystem=host:ro"
     ],
     "cleanup": [
         "/bin/pcap-config",
@@ -35,25 +36,42 @@
             ]
         },
         {
+            "name": "soundtouch",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://codeberg.org/soundtouch/soundtouch.git",
+                    "tag": "2.3.3",
+                    "commit": "e83424d5928ab8513d2d082779c275765dee31b9",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\d.]+)$"}
+                }
+            ]
+        },
+        {
             "name": "desmume",
             "buildsystem": "meson",
             "subdir": "desmume/src/frontend/posix/",
             "build-options" : {
                 "arch": {
                     "x86_64": {
-                        "cflags": "-minline-all-stringops"
+                        "cflags": "-minline-all-stringops -march=native -Ofast -flto"
                     }
                 }
             },
             "config-opts": [
-                "-Dfrontend-cli=false",
                 "--buildtype=release",
-                "--optimization=2"
+                "-Dfrontend-cli=true",
+                "-Dwifi=true",
+                "-Dopenal=true",
+                "-Dopengl=true",
+                "-Degl=true"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/TASEmulators/desmume",
+                    "url": "https://github.com/TASEmulators/desmume.git",
                     "commit": "91196788eb6f8543ea395ac1f6ad9e056dc7c5c2"
                 }
             ]
