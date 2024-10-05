@@ -62,7 +62,7 @@
             },
             "config-opts": [
                 "--buildtype=release",
-                "-Dfrontend-cli=true",
+                "-Dfrontend-cli=false",
                 "-Dwifi=true",
                 "-Dopenal=true",
                 "-Dopengl=true",
