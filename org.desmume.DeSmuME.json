@@ -63,11 +63,9 @@
             },
             "config-opts": [
                 "--buildtype=release",
-                "-Dfrontend-cli=false",
                 "-Dwifi=true",
                 "-Dopenal=true",
-                "-Dopengl=true",
-                "-Degl=true"
+                "-Dopengl=true"
             ],
             "sources": [
                 {
