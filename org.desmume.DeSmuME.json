@@ -9,8 +9,7 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=ipc",
-        "--device=all",
-        "--filesystem=host:ro"
+        "--device=all"
     ],
     "cleanup": [
         "/bin/pcap-config",
