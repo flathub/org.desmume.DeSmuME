@@ -1,7 +1,7 @@
 {
     "app-id": "org.desmume.DeSmuME",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desmume",
     "finish-args": [
@@ -9,14 +9,16 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=ipc",
-        "--device=all"
+        "--device=all",
+        "--filesystem=host:ro"
     ],
     "cleanup": [
         "/bin/pcap-config",
         "/include",
         "/lib/libpcap.a",
         "/lib/pkgconfig",
-        "/share/man"
+        "/share/man",
+        "/bin/soundstretch"
     ],
     "modules": [
         {
@@ -35,26 +37,42 @@
             ]
         },
         {
+            "name": "soundtouch",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://codeberg.org/soundtouch/soundtouch.git",
+                    "tag": "2.3.3",
+                    "commit": "e83424d5928ab8513d2d082779c275765dee31b9",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"}
+                }
+            ]
+        },
+        {
             "name": "desmume",
             "buildsystem": "meson",
             "subdir": "desmume/src/frontend/posix/",
             "build-options" : {
                 "arch": {
                     "x86_64": {
-                        "cflags": "-minline-all-stringops"
+                        "cflags": "-minline-all-stringops -march=native -Ofast -flto"
                     }
                 }
             },
             "config-opts": [
-                "-Dfrontend-cli=false",
                 "--buildtype=release",
-                "--optimization=2"
+                "-Dfrontend-cli=false",
+                "-Dwifi=true",
+                "-Dopenal=true",
+                "-Dopengl=true"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/TASEmulators/desmume",
-                    "commit": "91196788eb6f8543ea395ac1f6ad9e056dc7c5c2"
+                    "commit": "efd7486357ed1dbc0c6b4366b6676977b9296639"
                 }
             ]
         }
