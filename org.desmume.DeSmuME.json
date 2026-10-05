@@ -1,7 +1,7 @@
 {
     "app-id": "org.desmume.DeSmuME",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "desmume",
     "finish-args": [
@@ -30,8 +30,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.tcpdump.org/release/libpcap-1.10.5.tar.gz",
-                    "sha512": "e599a31f2f1c03bdf386defa613ea9f08f80459c87068c2dd36c55c1bd678e2622cdce6333f0a776f16812df7bd4d6747820d1c35c7a2f1d7ad4a2ffb45dbe24"
+                    "url": "https://www.tcpdump.org/release/libpcap-1.11.0.tar.gz",
+                    "sha512": "6a29b24afe8fc5fe7761871b2067dba1df69624c4eb263765e4da0c6a5a8915e0b32ec6767e190b2459f8b2a691b1ac5d9867c3a2a9c8234ff9b623b5a84414b"
                 }
             ]
         },
@@ -41,8 +41,8 @@
                 {
                     "type": "git",
                     "url": "https://codeberg.org/soundtouch/soundtouch.git",
-                    "tag": "2.3.3",
-                    "commit": "e83424d5928ab8513d2d082779c275765dee31b9",
+                    "tag": "2.4.1",
+                    "commit": "0047e0b1ecfceb041348579119bf79b73a322a3a",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"}
